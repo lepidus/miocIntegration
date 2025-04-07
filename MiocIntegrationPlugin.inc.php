@@ -21,7 +21,8 @@ class MiocIntegrationPlugin extends GenericPlugin
         $success = parent::register($category, $path, $mainContextId);
 
         if ($success && $this->getEnabled($mainContextId)) {
-            HookRegistry::register('Template::Workflow', array($this, 'addWorkflowModifications'));
+            HookRegistry::register('TemplateManager::display', [$this, 'loadResourcesToWorkflow']);
+            HookRegistry::register('Template::Workflow', [$this, 'addWorkflowModifications']);
         }
 
         return $success;
@@ -35,6 +36,17 @@ class MiocIntegrationPlugin extends GenericPlugin
     public function getDescription()
     {
         return __('plugins.generic.miocIntegration.description');
+    }
+
+    public function loadResourcesToWorkflow($hookName, $params)
+    {
+        $templateMgr = $params[0];
+        $template = $params[1];
+        $request = Application::get()->getRequest();
+
+        $request = Application::get()->getRequest();
+        $styleSheetUrl = $request->getBaseUrl() . '/' . $this->getPluginPath() . '/styles/sectionViewer.css';
+        $templateMgr->addStyleSheet('sectionViewerStyle', $styleSheetUrl, ['contexts' => 'backend']);
     }
 
     public function addWorkflowModifications($hookName, $params)

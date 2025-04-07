@@ -65,7 +65,7 @@ describe("Better display of preprints's section", function () {
         cy.login('dbarnes', null, 'publicknowledge');
 
         cy.findSubmission('active', submission.title);
-        cy.get('identificationSection').within(() => {
+        cy.get('.identificationSection').within(() => {
 			cy.contains('strong', 'Section');
 			cy.contains('span', 'Preprints');
 		});
