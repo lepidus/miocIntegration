@@ -5,14 +5,31 @@ describe("Better display of preprints's section", function () {
 
 	before(function () {
 		submission = {
-			section: 'Preprints',
+			section: 'Oswaldo Cruz Memories',
 			title: 'Fire & Blood',
 			abstract: 'Lorem ipsum dolor sit amet',
 			keywords: ['dragons', 'Westeros'],
 		}
 	});
 
-	it('Creates new submission', function () {
+	it('Moderator creates new section', function () {
+		cy.login('dbarnes', null, 'publicknowledge');
+		cy.contains('.app__navItem', 'Server').click();
+
+		cy.contains('Server Settings');
+		cy.get('#sections-button').click();
+		
+		cy.contains('a', 'Create Section').click();
+		cy.wait(1000);
+		cy.get('input[id^="title-en_US-"').type('Oswaldo Cruz Memories', { delay: 0 });
+		cy.get('input[id^="abbrev-en_US-"').type('MIOC', { delay: 0 });
+		cy.get('input[id^="path"').type('mioc', { delay: 0 });
+		cy.get('#sectionForm button.submitFormButton').click();
+		cy.wait(2000);
+
+		cy.contains('.label', 'Oswaldo Cruz Memories');
+	});
+	it('Author creates new submission', function () {
 		cy.login('eostrom', null, 'publicknowledge');
 
 		cy.get('div#myQueue a:contains("New Submission")').click();
