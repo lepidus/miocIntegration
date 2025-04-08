@@ -25,6 +25,3 @@ __This plugin is licensed under the GNU General Public License v3.0__
 __Copyright (c) 2025 SciELO__
 
 __Copyright (c) 2025 Lepidus Tecnologia__
-
-
-test mirroring
