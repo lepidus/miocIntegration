@@ -11,8 +11,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-msgid "plugins.generic.miocIntegration.displayName"
-msgstr "Integración MIOC"
+msgid "plugins.generic.submissionPageHeader.displayName"
+msgstr "Cabecera de la página de presentación"
 
-msgid "plugins.generic.miocIntegration.description"
-msgstr "Añade cambios al sistema para integrar el servidor con el MIOC"
+msgid "plugins.generic.submissionPageHeader.description"
+msgstr "Añade cambios a la cabecera de la página de envío en el panel de control"

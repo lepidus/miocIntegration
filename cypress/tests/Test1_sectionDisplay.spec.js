@@ -5,7 +5,7 @@ describe("Better display of preprints's section", function () {
 
 	before(function () {
 		submission = {
-			section: 'Oswaldo Cruz Memories',
+			section: 'High Fantasy',
 			title: 'Fire & Blood',
 			abstract: 'Lorem ipsum dolor sit amet',
 			keywords: ['dragons', 'Westeros'],
@@ -21,13 +21,13 @@ describe("Better display of preprints's section", function () {
 		
 		cy.contains('a', 'Create Section').click();
 		cy.wait(1000);
-		cy.get('input[id^="title-en_US-"').type('Oswaldo Cruz Memories', { delay: 0 });
-		cy.get('input[id^="abbrev-en_US-"').type('MIOC', { delay: 0 });
-		cy.get('input[id^="path"').type('mioc', { delay: 0 });
+		cy.get('input[id^="title-en_US-"').type('High Fantasy', { delay: 0 });
+		cy.get('input[id^="abbrev-en_US-"').type('hiFantasy', { delay: 0 });
+		cy.get('input[id^="path"').type('hiFantasy', { delay: 0 });
 		cy.get('#sectionForm button.submitFormButton').click();
 		cy.wait(2000);
 
-		cy.contains('.label', 'Oswaldo Cruz Memories');
+		cy.contains('.label', 'High Fantasy');
 	});
 	it('Author creates new submission', function () {
 		cy.login('eostrom', null, 'publicknowledge');
@@ -67,7 +67,7 @@ describe("Better display of preprints's section", function () {
         cy.findSubmission('active', submission.title);
         cy.get('.identificationSection').within(() => {
 			cy.contains('strong', 'Section');
-			cy.contains('span', 'Oswaldo Cruz Memories');
+			cy.contains('span', 'High Fantasy');
 		});
     });
 });

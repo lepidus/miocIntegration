@@ -7,7 +7,7 @@ describe('Plugin configuration', function () {
 		cy.waitJQuery();
 		cy.get('#plugins-button').click();
 
-		cy.get('input[id^=select-cell-miocintegrationplugin]').check();
-		cy.get('input[id^=select-cell-miocintegrationplugin]').should('be.checked');
+		cy.get('input[id^=select-cell-submissionpageheaderplugin]').check();
+		cy.get('input[id^=select-cell-submissionpageheaderplugin]').should('be.checked');
 	});
 });

@@ -1,20 +1,20 @@
 <?php
 
 /**
- * @file plugins/generic/miocIntegration/MiocIntegrationPlugin.php
+ * @file plugins/generic/submissionPageHeader/SubmissionPageHeaderPlugin.php
  *
  * Copyright (c) 2025 SciELO
  * Copyright (c) 2025 Lepidus Tecnologia
  * Distributed under the GNU GPL v3. For full terms see LICENSE or https://www.gnu.org/licenses/gpl-3.0.txt
  *
- * @class MiocIntegrationPlugin
- * @ingroup plugins_generic_miocIntegration
+ * @class SubmissionPageHeaderPlugin
+ * @ingroup plugins_generic_submissionPageHeader
  *
  */
 
 import('lib.pkp.classes.plugins.GenericPlugin');
 
-class MiocIntegrationPlugin extends GenericPlugin
+class SubmissionPageHeaderPlugin extends GenericPlugin
 {
     public function register($category, $path, $mainContextId = null)
     {
@@ -30,12 +30,12 @@ class MiocIntegrationPlugin extends GenericPlugin
 
     public function getDisplayName()
     {
-        return __('plugins.generic.miocIntegration.displayName');
+        return __('plugins.generic.submissionPageHeader.displayName');
     }
 
     public function getDescription()
     {
-        return __('plugins.generic.miocIntegration.description');
+        return __('plugins.generic.submissionPageHeader.description');
     }
 
     public function loadResourcesToWorkflow($hookName, $params)

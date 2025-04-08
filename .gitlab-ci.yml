@@ -1,5 +1,5 @@
 variables:
-  PLUGIN_NAME: 'miocIntegration'
+  PLUGIN_NAME: 'submissionPageHeader'
 
 include:
   - project: 'documentacao-e-tarefas/modelosparaintegracaocontinua'

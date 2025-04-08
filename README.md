@@ -1,6 +1,6 @@
-# Integração MIOC
+# Submission Page Header
 
-This plugin adds changes to the system to integrate the server with MIOC (Memórias do Instituto Oswaldo Cruz).
+This plugin adds changes to the header of the submissions page at the application dashboard.
 
 ## Compatibility
 
@@ -10,13 +10,13 @@ The latest release of this plugin is compatible with the following PKP applicati
 
 ## Plugin Download
 
-To download the plugin, go to the [Releases page](https://github.com/lepidus/miocIntegration/releases) and download the tar.gz package of the latest release compatible with your website.
+To download the plugin, go to the [Releases page](https://github.com/lepidus/submissionPageHeader/releases) and download the tar.gz package of the latest release compatible with your website.
 
 ## Installation
 
 1. Enter the administration area of ​​your OMP website through the __Dashboard__.
 2. Navigate to `Settings`>` Website`> `Plugins`> `Upload a new plugin`.
-3. Under __Upload file__ select the file __miocIntegration.tar.gz__.
+3. Under __Upload file__ select the file __submissionPageHeader.tar.gz__.
 4. Click __Save__ and the plugin will be installed on your website.
 
 # License

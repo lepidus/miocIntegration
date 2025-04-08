@@ -11,8 +11,8 @@ msgstr ""
 "PO-Revision-Date: 2021-01-08T23:03:20+00:00\n"
 "Language: \n"
 
-msgid "plugins.generic.miocIntegration.displayName"
-msgstr "MIOC Integration"
+msgid "plugins.generic.submissionPageHeader.displayName"
+msgstr "Submission Page Header"
 
-msgid "plugins.generic.miocIntegration.description"
-msgstr "Adds changes to the system to integrate the server with MIOC"
+msgid "plugins.generic.submissionPageHeader.description"
+msgstr "Adds changes to the submissions page header at dashboard"
